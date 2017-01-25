@@ -14,5 +14,5 @@ fi
 
 echo H2 base directory: $H2_BASE_DIR
 
-docker run --name h2-data --volume $H2_BASE_DIR:/h2 alexanderfefelov/docker-h2-data
-docker run --name h2-server --detach --publish 9092:9092 --volume /etc/localtime:/etc/localtime:ro --volume /etc/timezone:/etc/timezone:ro --volumes-from h2-data alexanderfefelov/docker-h2-server
+docker run --name h2-data --volume $H2_BASE_DIR:/h2 alexanderfefelov/h2-data
+docker run --name h2-server --detach --publish 9092:9092 --volume /etc/localtime:/etc/localtime:ro --volume /etc/timezone:/etc/timezone:ro --volumes-from h2-data alexanderfefelov/h2-server
